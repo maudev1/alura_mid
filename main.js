@@ -1,25 +1,23 @@
-// let tecla_pom = document.querySelector('.tecla_pom').onclick = tocaSomPom;
-// let tecla_clap = document.querySelector('.tecla_clap').onclick = tocaSomClap;
-
-// function tocaSomPom(){
-//     document.querySelector('#som_tecla_pom').play();
-// }
-// function tocaSomClap(){
-//     document.querySelector('#som_tecla_clap').play();
-
-// }
-
+function tocaSom(id_elemento){
+    document.querySelector(id_elemento).play();
+}
 
 const teclas = document.querySelectorAll('.tecla');
 
+teclas.forEach((element) => {
+    
+    let tecla = element.className.split(" ");
 
-teclas.forEach((i) => {
-
- 
-
-    i.className.split(" ")[1]
+    element.onclick = function(){
         
-
+        tocaSom(`#som_${tecla[1]}`);
+    } 
 })
 
+/**
+ * 
+ * 
+ * ALura
+ * 
+ */
 
